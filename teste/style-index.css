@@ -11,17 +11,57 @@ header{
 	margin: 0px;
 }
 
-/*-----------------------PRINCIPAL COM FLEXBOX----------------------*/
+/*-----------------------SECTION COM FLEXBOX----------------------*/
 
-#ajudante {
+.ajudante {
 	position: relative;
 	margin-top: 0px;
 	width: 100%;
 	height: 1000px;
 }
+/*-----------------------DIV DE PESQUISA POR CAT----------------------*/
+#pesquisar {
+	position: relative;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	height: 10%;
+	background-color: gray;
+}
+
+.div-pesquisa {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	position: relative;
+  	justify-content: center;
+  	align-items: center;
+	width: 100%;
+	height: 70%;
+	border-radius: 2%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+}
+
+.div-pesquisa > div {
+	width: 80%;
+	margin: 2px;
+	text-align: center;
+	line-height: 80px;
+	font-size: 16pt;
+	border-radius: 10px;
+}
+
+#busca-input {
+	width: 100%;
+}
+
+/*-----------------------PRINCIPAL COM FLEXBOX----------------------*/
 
 #main {
-	margin-top: 10px;
 	position: relative;
 	top: 50%;
 	left: 50%;
@@ -80,3 +120,95 @@ header{
   border-radius: 10px
 }
 
+/*-----------------------PASSOS COLAPSADOS----------------------*/
+
+.FAQ { 
+    vertical-align: top; 
+    height:auto !important; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+	align-content: center;
+}
+.list1{
+    display:none; 
+    height:auto;
+    line-height: auto;
+    width: 100%;
+    background-color: white;
+}
+.show1 {
+    display: none; 
+}
+.hide1:target + .show1 {
+    display: inline; 
+}
+.hide1:target {
+    display: none; 
+}
+.hide1:target ~ .list1 {
+    display:inline; 
+}
+
+.hide1, .show1{
+    width: 10%;
+    height: 10%;
+    border-radius: 2%;
+    font-size: 10pt;
+    color: #fff;
+    text-shadow: 0 1px 0 #666;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 1px 1px 2px #000;
+    background: #cccbbb;
+    opacity: .95;
+    margin-right: 0;
+}
+
+.hide1:hover, .show1:hover {
+    color: #eee;
+    text-shadow: 0 0 1px #666;
+    text-decoration: none;
+    box-shadow: 0 0 4px #222 inset;
+    opacity: 1;
+}
+
+.list1 p{
+    height:auto;
+    margin:0;
+}
+.question {
+    height: auto;
+    width: 90%;
+    line-height: auto;
+    background-color: gray;
+}
+
+/*--------------------------------LISTA DE CATEGORIA---------------------------------*/
+
+.example {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 100%;
+	border: 1px solid #000;
+	margin: 1em 0;
+}
+
+ul {
+	background-color: lightgreen;
+	width: 100%;
+	padding-left: 0;
+}
+
+li {
+	background-color: black;
+	list-style: none;
+	display: inline-block;
+	width: auto;
+	height: auto;
+	padding: 10px;
+	border-radius: 10px;
+	text-align: center;
+}
