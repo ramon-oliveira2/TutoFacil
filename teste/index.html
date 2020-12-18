@@ -52,16 +52,24 @@
 							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 						</p>
 					</div>
 				</div>
 			<div class="example">
-				<label id="show-cat">Categorias:</label>
-				<div>
-					<ul>
-						<li>#Celular</li>
+				<form>
+					<label id="label_cat">Categorias:</label>
+					<ul class="show_categoria">
+						<li>#CELULAR</li>
+						<li>#PRINT</li>
+						<li>#COMPUTADOR</li>
 					</ul>
-				</div>
+				</form>
 			</div>
 		</div>	
 	</div>
@@ -73,7 +81,7 @@
 			button.classList.toggle('accordion__button--active');
 			if (button.classList.contains('accordion__button--active')) {
 				accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-				document.getElementsByTagId('passos', 'main').style.maxHeight = accordionContent.scrollHeight 
+				document.getElementsByTagId('main').style.height = accordionContent.scrollHeight 
 				+ 'px';
 			} else{
 				accordionContent.style.maxHeight = 0;

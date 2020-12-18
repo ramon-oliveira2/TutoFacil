@@ -28,7 +28,7 @@ header{
 
 #main {
 	position: relative;
-	width: 80%;
+	width: 70%;
 	height: auto;
 	background-color: #777777;
 	margin: 0;
@@ -40,7 +40,7 @@ header{
 
 #pesquisar {
 	position: relative;
-	width: 80%;
+	width: 70%;
 	height: 10%;
 	background-color: gray;
 }
