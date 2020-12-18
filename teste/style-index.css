@@ -28,19 +28,15 @@ header{
 
 #main {
 	position: relative;
-	width: 70%;
+	width: 60%;
 	height: auto;
 	background-color: #777777;
 	margin: 0;
 }
 
-#div-titulo{
-	text-align: center;
-}
-
 #pesquisar {
 	position: relative;
-	width: 70%;
+	width: 60%;
 	height: 10%;
 	background-color: gray;
 }
@@ -178,23 +174,27 @@ header{
 	flex-direction: row;
 	flex-wrap: nowrap;
 	width: 100%;
-	border: 1px solid #000;
 	margin: 1em 0;
 }
 
 ul {
-	background-color: lightgreen;
+	background-color: opacity:1;
 	width: 100%;
-	padding-left: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: left;
+	margin: 2%;
 }
 
 li {
-	background-color: black;
+	background-color: white;
 	list-style: none;
-	display: inline-block;
 	width: auto;
 	height: auto;
 	padding: 10px;
-	border-radius: 10px;
 	text-align: center;
+	border-radius: 2px;
+	border: 0.5px solid black;
+	font-stretch: expanded;
 }
