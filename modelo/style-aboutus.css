@@ -15,27 +15,27 @@ section{
 
 .about-section{
 	background:url("imagens/background-aboutus.jpg") no-repeat left;
-	background-size: 55%;
+	background-size: 50%;
 	background-color: #fdfdfd;
 	overflow: hidden;
-	padding: 100px 0;
+	padding: 20px 0;
 }
 
 .inner-container{
 	width: 55%;
 	float: right;
 	background-color: #fdfdfd;
-	padding: 156px;
+	padding: 130px;
 }
 
 .inner-container h1{
 	margin-bottom: 30px;
-	font-size: 30px;
+	font-size: 30pt;
 	font-weight: 900;
 }
 
 .text{
-	font-size: 13px;
+	font-size: 18pt;
 	color: #545454;
 	line-height: 30px;
 	text-align: justify;

@@ -7,8 +7,6 @@
     <link rel="stylesheet" type="text/css" href="style-home.css">
     <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="style-navbar.css">
-    <link rel="stylesheet" type="text/css" href="style-aboutus.css">
-    <link rel="stylesheet" type="text/css" href="style-footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -26,46 +24,20 @@
         </ul>
         <div class="search-icon"><span class="fas fa-search"></span></div>
         <div class="cancel-icon"><span class="fas fa-times"></span></div>
-        <form action="#" method="get">
-            <input type="search" name="pesquisar" class="search-data" placeholder="Pesquisar" required>
-            <button type="submit" class="fas fa-search"></button>
+        <form action="resultado.php" method="get">
+            <input type="search" name="txtpesquisar" class="search-data" placeholder="Pesquisar" required>
+            <button type="submit" class="fas fa-search" name="pesquisar"></button>
+            <?php
+              if (isset($_GET['pesquisar'])) {
+                $nome = $_GET['txtpesquisar'] . '%';
+                $query = "SELECT * FROM temas WHERE titulo LIKE '$titulo'";
+              }else{
+                $query = "SELECT * FROM temas ORDER BY titulo ASC";
+              }
+            ?>
         </form>
     </nav>
-    <section>
-        <div class="about-section">
-            <div class="inner-container">
-                <h1>Sobre nós</h1>
-                <p class="text">
-                    Esse projeto tem como objetivo informar sobre assuntos relevantes sobre tecnologia de uma forma simples e flexível para pessoas de todas as idades.
-                </p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-div">
-            <h1>Contato dos desenvolvedores:</h1>
-            <div class="box-div">
-                <div class="box">
-                    <span><h1>Emanuel Vasconcelos</h1></span>
-                    <span><p>Email: emanuelvanobre@gmail.com</p></span><br>
-                    <span><p>Função: Desenvolvedor Web</p></span><br>
-                    <span><p>Whatzapp: +85940028922</p></span>
-                </div>
-                <div class="box">
-                    <span><h1>Emanuel Vasconcelos</h1></span>
-                    <span><p>Email: emanuelvanobre@gmail.com</p></span><br>
-                    <span><p>Função: Desenvolvedor Web</p></span><br>
-                    <span><p>Whatzapp: +85940028922</p></span>
-                </div>
-                <div class="box">
-                    <span><h1>Emanuel Vasconcelos</h1></span>
-                    <span><p>Email: emanuelvanobre@gmail.com</p></span><br>
-                    <span><p>Função: Desenvolvedor Web</p></span><br>
-                    <span><p>Whatzapp: +85940028922</p></span>
-                </div>
-            </div>
-        </div>
-    </footer>
+
     <script>
         const menuBtn = document.querySelector(".menu-icon span");
         const searchBtn = document.querySelector(".search-icon");
