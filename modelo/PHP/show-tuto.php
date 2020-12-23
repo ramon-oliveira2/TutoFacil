@@ -34,7 +34,7 @@
     <section>
         <div class="show-div">
             <div class="titulo">
-                <label><h1>TITULO DO MEU TUTORIAL.</h1></label>
+                <label class="text"><h1>TITULO DO MEU TUTORIAL.</h1></label>
             </div>
             <div class="body-tuto">
                 <p>
@@ -45,7 +45,7 @@
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-                <label class="text"><h2>aoiwemjgiawgioawrhkaiohok</h2></label>
+                <h1>aoiwemjgiawgioawrhkaiohok</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
