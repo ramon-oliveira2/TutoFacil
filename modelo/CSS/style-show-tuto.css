@@ -1,0 +1,48 @@
+.show-div{
+	width: 80%;
+	height: auto;
+	margin: 20px 0;
+	background-color: #f7f0f0;
+	font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+	font-stretch: ultra-expanded;
+}
+
+.show-div div{
+	padding: 20px 40px;
+}
+
+.show-div p{
+	font-size: 16pt;
+}
+
+.show-div h1{
+	margin: 0;
+	padding: 40px 0px;
+}
+
+.body-tuto h1{
+	margin: 0;
+	padding: 40px 0px;
+	line-height: 20px;
+}
+
+body{
+	background: url("imagens/background-all.jpg") no-repeat;
+	background-size: 100% 100%;
+}
+
+section{
+	width: 100%;
+	height: auto;
+	background: url("imagens/background-all.jpg") no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.espace{
+	width: 100%;
+	min-height: 100px;
+	max-height: 150px;
+}
