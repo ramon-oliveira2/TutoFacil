@@ -2,13 +2,16 @@
 
 nav {
     background: #131313;
+    position: fixed;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     height: 70px;
+    width: 100%;
     padding: 0 100px;
+    z-index: 2;
 }
 nav .logo{
     color: #ffffff;
