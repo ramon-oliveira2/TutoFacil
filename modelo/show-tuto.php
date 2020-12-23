@@ -1,3 +1,7 @@
+<?php
+  include 'conexao.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,50 +24,60 @@
         <div class="menu-icon"><span class="fas fa-bars"></span></div>
         <div class="logo">TutoFacil</div>
         <ul class="nav-items">
-            <li><a href="home.html">Início</a></li>
-            <li><a href="tutoriais.html">Artigos</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="index.php">Início</a></li>
+            <li><a href="tutoriais.php">Artigos</a></li>
+            <li><a href="sobre.php">Sobre</a></li>
         </ul>
         <div class="search-icon"><span class="fas fa-search"></span></div>
         <div class="cancel-icon"><span class="fas fa-times"></span></div>
-        <form action="#" method="get">
-            <input type="search" name="pesquisar" class="search-data" placeholder="Pesquisar" required>
-            <button type="submit" class="fas fa-search"></button>
+        <form action="tutoriais.php" method="get">
+            <input type="search" name="txtpesquisar" class="search-data" placeholder="Pesquisar" required>
+            <button type="submit" name="pesquisar" class="fas fa-search"></button>
         </form>
     </nav>
     <section>
         <div class="show-div">
+  			<?php
+              if(isset($_GET['id'])){
+                $id_tema = $_GET['id'];
+                $query = "SELECT * FROM temas WHERE id_tema LIKE '$id_tema'";
+              }else{
+                header('Location: index.php');
+              }		
+                $resultado = mysqli_query($conexao, $query);
+                while ($array = mysqli_fetch_array($resultado)) {
+                    $id = $array['id_tema'];
+                    $titulo_tema = $array['titulo'];
+                    $texto = $array['texto'];
+  			    	?>         
             <div class="titulo">
-                <label class="text"><h1>TITULO DO MEU TUTORIAL.</h1></label>
+                <label class="text"><h1><?php echo $titulo_tema ?></h1></label>
             </div>
+                
             <div class="body-tuto">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <h1>aoiwemjgiawgioawrhkaiohok</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+				<?php echo $texto ?>
             </div>
-            <div class="espace"></div>
+            
+            <div class="categorias">                
+                <?php              
+                	$query_num_categoria = "SELECT * FROM categorizacao WHERE id_tema LIKE '$id'";
+                	$num_categorias = mysqli_query($conexao, $query_num_categoria);
+                	//faz uma query pegando os ids das categorias
+                	while ($array_num_categorias = mysqli_fetch_array($num_categorias)) {
+                        //faz um while rodando o resultado da query e armazenando num array
+                        $id_categoria = $array_num_categorias['id_categoria'];
+                    	//armazena o id_categoria numa variavel
+                    	$query_categoria = "SELECT * FROM categoria WHERE id_categoria LIKE '$id_categoria'";
+                    	$categoria = mysqli_query($conexao, $query_categoria);
+                    	//faz uma query pra pegar o nome da categoria com o numero que pegou no id_categoria
+                    	$resultado_nome = mysqli_fetch_array($categoria);
+                    	//armazena num array o resultado da query
+                    	$nome_categoria = $resultado_nome['nome_categoria'];
+                ?>
+                <button><a href="tutoriais_categoria.php?id=<?php echo $id?>"><?php echo $nome_categoria ?></a></button>
+                <?php }?>
+            </div> 
+        <?php }?>
         </div>
     </section>
     <footer>

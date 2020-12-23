@@ -24,9 +24,9 @@
       <div class="menu-icon"><span class="fas fa-bars"></span></div>
       <div class="logo">TutoFacil</div>
       <ul class="nav-items">
-            <li><a href="index.php">Início</a></li>
-            <li><a href="tutoriais.php">Artigos</a></li>
-            <li><a href="sobre.php">Sobre</a></li>
+          <li><a href="index.php">Início</a></li>
+          <li><a href="tutoriais.php">Artigos</a></li>
+          <li><a href="sobre.php">Sobre</a></li>
       </ul>
       <div class="search-icon"><span class="fas fa-search"></span></div>
       <div class="cancel-icon"><span class="fas fa-times"></span></div>
@@ -43,27 +43,27 @@
             <h2>Lista de Tutoriais</h2>
           </span>
           <div>
-          <?php
-              if(isset($_GET['pesquisar'])){
-                $titulo = '%' . $_GET['txtpesquisar'] . '%';
-                $query = "SELECT * FROM temas WHERE titulo LIKE '$titulo'";	
+  			   <?php
+              if(isset($_GET['id'])){
+                $id_tema = $_GET['id'];
+                $query = "SELECT * FROM temas WHERE id_tema LIKE '$id_tema'";
               }else{
-                $query = "SELECT * FROM temas ORDER BY titulo ASC";
+                header('Location: index.php');
               }	
               $resultado = mysqli_query($conexao, $query);
               while ($array = mysqli_fetch_array($resultado)) {
-                  $id = $array['id_tema'];
-                  $titulo_tema = $array['titulo'];
-                  $texto = $array['texto'];
+                $id = $array['id_tema'];
+                $titulo_tema = $array['titulo'];
+                $texto = $array['texto'];
 
-  			    ?>         
+  					?>
             <h1><a href="show-tuto.php?id=<?php echo $id ?>"><?php echo $titulo_tema?></a></h1>
             <div class="descrição">
               <?php echo $texto ?>
             </div>
-            <?php }?>
+           <?php }?>
           </div>
-         </div>
+        </div>
       </div>
     </section>
                  
@@ -72,10 +72,10 @@
         <h1>Contato dos desenvolvedores:</h1>
         <div class="box-div">
           <div class="box">
-            <span><h1>Emanuel Vasconcelos</h1></span>
-            <span><p>Email: emanuelvanobre@gmail.com</p></span><br>
-            <span><p>Função: Desenvolvedor Front</p></span><br>
-            <span><p>Whatzapp: +85912345678</p></span>
+            <span><h1>Manel das Quebradas</h1></span>
+            <span><p>Email: manuelportugues@gmail.com</p></span><br>
+            <span><p>Função: Desenvolvedor da Periferia</p></span><br>
+            <span><p>Whatzapp: 606060senãodercerto60denovo</p></span>
        		</div>
           <div class="box">
             <span><h1>Marcus Vinícius</h1></span>

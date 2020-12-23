@@ -20,15 +20,15 @@
         <div class="menu-icon"><span class="fas fa-bars"></span></div>
         <div class="logo">TutoFacil</div>
         <ul class="nav-items">
-            <li><a href="home.html">Início</a></li>
-            <li><a href="tutoriais.html">Artigos</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="index.php">Início</a></li>
+            <li><a href="tutoriais.php">Artigos</a></li>
+            <li><a href="sobre.php">Sobre</a></li>
         </ul>
         <div class="search-icon"><span class="fas fa-search"></span></div>
         <div class="cancel-icon"><span class="fas fa-times"></span></div>
-        <form action="#" method="get">
-            <input type="search" name="pesquisar" class="search-data" placeholder="Pesquisar" required>
-            <button type="submit" class="fas fa-search"></button>
+        <form action="tutoriais.php" method="get">
+            <input type="search" name="txtpesquisar" class="search-data" placeholder="Pesquisar" required>
+            <button type="submit" name="pesquisar" class="fas fa-search"></button>
         </form>
     </nav>
     <section>

@@ -14,3 +14,48 @@
     </form>
   </div>
 </nav>
+
+Codigo de exemplo no SQL:
+
+De inserir categoria:
+insert into `categoria`(nome_categoria) values ('Celular');
+
+De inserir tema:
+insert into `temas`(titulo,texto) values('O que é, para que serve e como tirar "print"?','<p>Olá, hoje eu irei explicar para você tudo o que você precisa saber sobre a função " <strong> <b> Print </b> </strong> <strong> <b> Screen </b> </strong> " no seu computador e a mesma em sua versão nos celulares.</p>
+<p></p>
+<p>Print Screen é um tecla comum nos teclados, tanto os de notebook (embutidos) quanto os separados para desktop (computador pessoal), ela está normalmente localizada no canto superior direito e pode estar escrito de forma abreviada, como “ <strong> <b> PrtScr </b> </strong> ”. </p>
+<p><img src="CSS/imagens/imagem1.png" alt="" /></p>
+<p>O atalho print screen tem a finalidade de realizar <strong> <b> capturas de tela</b></strong><strong> </strong>do exato momento em seu computador, por exemplo, você está fazendo uma pesquisa no Google (site de pesquisa global) e você quer compartilhar os detalhes para alguém, mas você não quer digitar ou copiar tudo o que há no site, então você utiliza o print screen, e ele captura a sua tela, como uma foto e copia essa imagem para a <strong> <b> Área </b></strong><strong><b>de Transferência </b> </strong> , um recurso utilizado por um sistema operacional para o armazenamento de pequenas quantidades de dados para transferência entre documentos ou aplicativos, como copiar, colar ou recortar.</p>
+<p></p>
+<p>Vamos para o que mais interessa, como tirar o print screen?</p>
+<p></p>
+<p><strong> <b> Passo 1: Computador ou celular?</b></strong><strong><b></b></strong></p>
+<p><strong><b></b></strong></p>
+<p>Ambos aparelhos eletrônicos, PC e o smartphone tem a mesma função de captura de tela, porém elas são executadas de formas diferentes e em resoluções diferentes. Tenha isso em mente.</p>
+<p></p>
+<p><strong> <b> Passo 2: Qual o sistema operacional do seu eletrônico?</b></strong></p>
+<p><strong><b></b></strong></p>
+<p>A forma de execução do print screen também muda dependendo do sistema, por exemplo, no MAC/OS não existe um botão específico no teclado que o execute, você tem que apertar as teclas shift + maçã + 3 e a captura vai ser salva diretamente na área de trabalho. Já nos smartphones, existe um botão que pode ser físico ou virtual, e apenas esse fato muda a forma de tirar o print.</p>
+<p></p>
+<p><strong> <b> Passo 3: Execute a função de captura de tela. </b> </strong> (Utilizarei como exemplo a fórmula dos sistemas Windows e citarei as duas formas mais comuns de tirar print no celular).</p>
+<p></p>
+<p><img src="CSS/imagens/imagem2.png" alt="" />Windows: você irá apertar a tecla <strong> <b> “Print </b> </strong> <strong> <b> screen” </b> </strong>  ou  <strong> <b> "PrtScr" </b> </strong> no <strong> <b>   </b> </strong> teclado, e a imagem será salva na área de <strong> <b>   </b> </strong> transferência.</p>
+<p></p>
+<p>Smartphone: existem duas formas.</p>
+<p>     1. Apertar ao mesmo tempo as teclas: POWER + HOME.</p>
+<p>     2. Apertar ao mesmo tempo as teclas POWER+ Diminuir volume.</p>
+<p><img src="CSS/imagens/imagem3.png" alt="" /></p>
+<p>Botão HOME = Se localiza na parte inferior do smartphone e ele serve para levar você até o ínicio do celular, onde tem os atalhos para os aplicativos. Em modelos mais novos, esse botão deixou de ser físico e passou a funcionar através do touch screen.</p>
+<p></p>
+<p>Botão POWER = Se localiza nas laterais do smartphone e serve para ligar e desligar a tela do celular.</p>
+<p></p>
+<p><strong> <b> Passo 4: Encontre a imagem.</b></strong></p>
+<p><strong><b></b></strong></p>
+<p>Windows: Quando a imagem estiver salva na área de transferência, abre algum programa de edição como o Paint e aperta Ctrl + V, assim você vai colar a captura no programa e assim você pode salvar ele como uma imagem no seu PC.</p>
+<p></p>
+<p>Smartphone: Depois que você apertar os botões ao mesmo tempo, sua tela vai piscar, indicando que o print foi tirado. Assim, se você for em sua galeria de fotos, no álbum “Captura de tela”, verá todos os seus prints salvos.</p>
+<p></p>');
+
+
+De inserir uma categoria em um tema:
+insert into `categorizacao`(id_tema, id_categoria) values (1,1); 
