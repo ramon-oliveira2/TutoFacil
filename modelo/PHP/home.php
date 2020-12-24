@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TutoFacil - Home</title>
+    <title>TutoFacil - Tutoriais</title>
     <link rel="stylesheet" type="text/css" href="CSS/style-home.css">
     <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
     <link rel="stylesheet" type="text/css" href="CSS/style-navbar.css">
-    <link rel="stylesheet" type="text/css" href="CSS/style-aboutus.css">
     <link rel="stylesheet" type="text/css" href="CSS/style-footer.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style-lista-tutoriais.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -20,9 +20,9 @@
         <div class="menu-icon"><span class="fas fa-bars"></span></div>
         <div class="logo">TutoFacil</div>
         <ul class="nav-items">
-            <li><a href="index.php">Início</a></li>
-            <li><a href="tutoriais.php">Artigos</a></li>
-            <li><a href="sobre.php">Sobre</a></li>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="tutoriais.html">Artigos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
         </ul>
         <div class="search-icon"><span class="fas fa-search"></span></div>
         <div class="cancel-icon"><span class="fas fa-times"></span></div>
@@ -32,14 +32,7 @@
         </form>
     </nav>
     <section>
-        <div class="about-section">
-            <div class="inner-container">
-                <h1>Sobre nós</h1>
-                <p class="text">
-                    Esse projeto tem como objetivo informar sobre assuntos relevantes sobre tecnologia de uma forma simples e flexível para pessoas de todas as idades.
-                </p>
-            </div>
-        </div>
+
     </section>
     <footer>
         <div class="footer-div">
