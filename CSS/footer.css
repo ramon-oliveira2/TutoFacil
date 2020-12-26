@@ -137,6 +137,11 @@ footer {
 	background: #000000;
 }
 
+.right form .email input:invalid, 
+.right form .msg textarea {
+	box-shadow: none;
+}
+
 .bottom center {
 	padding: 5px;
 	font-size: 0.9375rem;
