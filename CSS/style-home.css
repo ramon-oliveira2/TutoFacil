@@ -410,5 +410,11 @@
       grid-template-columns: 1fr;
     }
   }
+
+  @media screen and (max-width: 560px) {
+    .article h1 {
+      font-size: 2rem;
+    }
+  }
   
   /* Fim dos Artigos Em Destaque */
