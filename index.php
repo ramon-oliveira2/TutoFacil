@@ -114,7 +114,7 @@
             </div>
 
             <div class="center box">
-                <h2>Address</h2>
+                <h2>Endereço</h2>
                 <div class="content">
                     <div class="place">
                         <span class="fas fa-map-marker-alt"></span>
