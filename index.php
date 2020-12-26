@@ -35,7 +35,6 @@
     </nav>
     <script src="JS/navbar.js"></script>
 
-    -->
     <!-- Término do menu de navegação  -->
 
     <!-- Início do header -->
