@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
+
+.espacamento {
+	width: 100%;
+	height: 10px;
+	background: #015249;
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background: #131313;
+}
+
+.main-content {
+  display: flex;
+}
+
+.main-content .box {
+  flex-basis: 50%;
+  padding: 20px 20px;
+}
+
+.box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+.box .content::before {
+	position: absolute;
+	content: '';
+	top: -10px;
+	height: 2px;
+	width: 100%;
+	background: #1a1a1a;
+}
+
+.box .content::after {
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 15%;
+	background: #015249;
+	top: -10px;
+}
+
+.left .content p {
+	text-align: justify;
+	line-height: 30px;
+}
+
+.center .content .fas{
+	font-size: 1.4375rem;
+	background: #1a1a1a;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 50%;
+	transition: 0.3s ease;
+}
+
+.center .content .fas:hover {
+	background-color: #57BC90;
+}
+
+.center .content .text {
+	font-size: 1.0625rem;
+	font-weight: 500;
+	padding-left: 10px;
+}
+
+.center .content .email {
+	margin: 10px 0;
+}
+
+.right form .text {
+	font-size: 1.0625rem;
+	margin-bottom: 5px;
+	color: #656565;
+}
+
+.right form .msg {
+	margin-top: 10px;
+}
+
+.right form input, .right form textarea {
+	width: 100%;
+	font-size: 0.8rem;
+	background: #151515;
+	padding-left: 6px;
+	border: 1px solid #222222;
+	color: #ffffff;
+}
+
+.right form textarea {
+	padding-top: 8px;
+}
+
+.right form input:focus, 
+.right form textarea:focus {
+	outline-color: #57BC90;
+}
+
+.right form input {
+	height: 35px;
+}
+
+.right form .send-btn {
+	margin-top: 10px;
+
+}
+
+.right form .send-btn button {
+	color: #ffffff;
+	height: 40px;
+	width: 100%;
+	border: none;
+	outline: none;
+	background: #57BC90;
+	font-size: 1.0625rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.right form .send-btn button:hover{
+	background: #000000;
+}
+
+.right form .email input:invalid, 
+.right form .msg textarea {
+	box-shadow: none;
+}
+
+.bottom center {
+	padding: 5px;
+	font-size: 0.9375rem;
+	background-color: #151515;
+}
+
+.bottom center span {
+	color: #656565;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 900px) {
+	footer {
+		position: relative;
+		bottom: 0;
+	}
+	.main-content {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.main-content .box {
+		margin: 5px;
+	}
+}
