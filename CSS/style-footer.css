@@ -1,104 +1,164 @@
-footer{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0;
-	font-family: sans-serif;
-	padding: 0;
-	min-height: 325px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
+
+.espacamento {
 	width: 100%;
-	background-color: #222;
-
+	height: 10px;
+	background: #015249;
 }
 
-.footer-div{
-	color: white;
-	font-family: "Open", sans-serif;
+footer {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background: #131313;
+}
+
+.main-content {
+  display: flex;
+}
+
+.main-content .box {
+  flex-basis: 50%;
+  padding: 20px 20px;
+}
+
+.box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+.box .content::before {
+	position: absolute;
+	content: '';
+	top: -10px;
+	height: 2px;
 	width: 100%;
+	background: #1a1a1a;
 }
 
-.footer-div h1{
-	margin: 20px 40px;
+.box .content::after {
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 15%;
+	background: #015249;
+	top: -10px;
 }
 
-.box-div{
-	width: auto;
-	height: auto;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	grid-gap: 10px;
-	padding: 10px;
-	box-sizing: border-box;
+.left .content p {
+	text-align: justify;
+	line-height: 30px;
 }
 
-.box-div .box{
-	position: relative;
-	background-color: #fff;
-	padding: 20px 40px 40px;
+.center .content .fas{
+	font-size: 1.4375rem;
+	background: #1a1a1a;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
 	text-align: center;
-	overflow: hidden;
-	border-radius: 20px;
+	border-radius: 50%;
+	transition: 0.3s ease;
 }
 
-.box-div .box h1{
-	position: relative;
-	padding-bottom: 25px;
-	color: #fff;
-	z-index: 1;
-	opacity: 0.6;
-	font-size: 18pt;
+.center .content .fas:hover {
+	background-color: #57BC90;
 }
 
-.box-div .box h3{
-	margin: 0;
-	padding: 0;
-	font-size: 24px;
-	transform: uppercase;
-	color: #fff;
+.center .content .text {
+	font-size: 1.0625rem;
+	font-weight: 500;
+	padding-left: 10px;
 }
 
-.box-div .box p{
-	margin: 0;
-	padding: 0;
-	font-size: 12pt;
-	color: #fff;
-	line-height: 15px;
+.center .content .email {
+	margin: 10px 0;
 }
 
-.box-div .box:nth-child(1){
-	background: linear-gradient(45deg, #333, #888);
-}
-.box-div .box:nth-child(2){
-	background: linear-gradient(45deg, #333, #888);
-}
-.box-div .box:nth-child(3){
-	background: linear-gradient(45deg, #333, #888);
-}
-.box-div .box:nth-child(4){
-	background: linear-gradient(45deg, #333, #888);
+.right form .text {
+	font-size: 1.0625rem;
+	margin-bottom: 5px;
+	color: #656565;
 }
 
-@media screen and (max-width:1100px){
-	.box-div {
-		margin-bottom: 20px;
+.right form .msg {
+	margin-top: 10px;
+}
+
+.right form input, .right form textarea {
+	width: 100%;
+	font-size: 0.8rem;
+	background: #151515;
+	padding-left: 6px;
+	border: 1px solid #222222;
+	color: #ffffff;
+}
+
+.right form textarea {
+	padding-top: 8px;
+}
+
+.right form input:focus, 
+.right form textarea:focus {
+	outline-color: #57BC90;
+}
+
+.right form input {
+	height: 35px;
+}
+
+.right form .send-btn {
+	margin-top: 10px;
+
+}
+
+.right form .send-btn button {
+	color: #ffffff;
+	height: 40px;
+	width: 100%;
+	border: none;
+	outline: none;
+	background: #57BC90;
+	font-size: 1.0625rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.right form .send-btn button:hover{
+	background: #000000;
+}
+
+.bottom center {
+	padding: 5px;
+	font-size: 0.9375rem;
+	background-color: #151515;
+}
+
+.bottom center span {
+	color: #656565;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 900px) {
+	footer {
+		position: relative;
+		bottom: 0;
 	}
-}
-
-@media screen and (max-width:1065px){
-	.box-div .box p{
-		font-size: 10pt;
+	.main-content {
+		flex-wrap: wrap;
+		flex-direction: column;
 	}
-}
-
-@media screen and (max-width:912px){
-	.box-div .box p{
-		font-size: 12pt;
-	}
-}
-
-@media screen and (max-width: 800px){
-	.footer-div h1{
-		font-size: 
+	.main-content .box {
+		margin: 5px;
 	}
 }

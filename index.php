@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TutoFacil - Home</title>
-    <link rel="stylesheet" type="text/css" href="CSS/style-" />
+    <link rel="stylesheet" type="text/css" href="CSS/style-home.css" />
     <link rel="stylesheet" type="text/css" href="CSS/normalize.css" />
     <link rel="stylesheet" type="text/css" href="CSS/style-navbar.css" />
     <link rel="stylesheet" type="text/css" href="CSS/style-footer.css" />
