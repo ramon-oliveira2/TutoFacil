@@ -179,7 +179,7 @@ include 'conexao.php';
           </div>
           <div class="email">
             <span class="fas fa-envelope"></span>
-            <span>tutofacil@gmail.com</span>
+            <span>tutofacil.ep@gmail.com</span>
           </div>
         </div>
       </div>
