@@ -20,7 +20,7 @@ include 'conexao.php';
 </head>
 
 <body>
-
+    <div class="arranjo_tecnico"></div>
     <nav>
         <div class="menu-icon"><span class="fas fa-bars"></span></div>
         <div class="logo">TutoFacil</div>

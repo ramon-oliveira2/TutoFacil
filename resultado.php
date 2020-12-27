@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head> 
 <body>
-    
+    <div class="arranjo_tecnico"></div>
     <nav>
         <div class="menu-icon"><span class="fas fa-bars"></span></div>
         <div class="logo">TutoFacil</div>
