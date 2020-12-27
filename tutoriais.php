@@ -39,36 +39,118 @@ include 'conexao.php';
 
   <!-- Término do menu de navegação  -->
 
-  <section>
-    <div class="list-div">
-      <div class="tuto-div">
-        <span id="h1-div">
-          <h2>Lista de Tutoriais</h2>
-        </span>
-        <div>
-          <?php
-          if (isset($_GET['pesquisar'])) {
-            $titulo = '%' . $_GET['txtpesquisar'] . '%';
-            $query = "SELECT * FROM temas WHERE titulo LIKE '$titulo'";
-          } else {
-            $query = "SELECT * FROM temas ORDER BY titulo ASC";
-          }
-          $resultado = mysqli_query($conexao, $query);
-          while ($array = mysqli_fetch_array($resultado)) {
-            $id = $array['id_tema'];
-            $titulo_tema = $array['titulo'];
-            $texto = $array['texto'];
-
-          ?>
-            <h1><a href="show-tuto.php?id=<?php echo $id ?>"><?php echo $titulo_tema ?></a></h1>
-            <div class="descrição">
-              <?php echo $texto ?>
-            </div>
-          <?php } ?>
+  <div class="row">
+    <div class="tuto-div">
+      <div class="tuto-box">
+        <img src="./CSS/imagens/background-aboutus.jpg">
+        <div class="conteudo">
+          <h1>Titulo bem grande man grande mesmo to falando.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
+          <h3>Categoria:</h3>
+          <div class="categorias-tuto">
+            <div>celular</div>
+          </div>
+          <a href="">Leia mais</a>
+        </div>
+      </div>
+      <div class="tuto-box">
+        <img src="./CSS/imagens/background-aboutus.jpg">
+        <div class="conteudo">
+          <h1>Titulo bem grande man grande mesmo to falando.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
+          <h3>Categoria:</h3>
+          <div class="categorias-tuto">
+            <div>celular</div>
+          </div>
+          <a href="">Leia mais</a>
+        </div>
+      </div>
+      <div class="tuto-box">
+        <img src="./CSS/imagens/background-aboutus.jpg">
+        <div class="conteudo">
+          <h1>Titulo bem grande man grande mesmo to falando.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
+          <h3>Categoria:</h3>
+          <div class="categorias-tuto">
+            <div>celular</div>
+          </div>
+          <a href="">Leia mais</a>
+        </div>
+      </div>
+      <div class="tuto-box">
+        <img src="./CSS/imagens/background-aboutus.jpg">
+        <div class="conteudo">
+          <h1>Titulo bem grande man grande mesmo to falando.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
+          <h3>Categoria:</h3>
+          <div class="categorias-tuto">
+            <div>celular</div>
+          </div>
+          <a href="">Leia mais</a>
+        </div>
+      </div>
+      <div class="tuto-box">
+        <img src="./CSS/imagens/background-aboutus.jpg">
+        <div class="conteudo">
+          <h1>Titulo bem grande man grande mesmo to falando.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
+          <h3>Categoria:</h3>
+          <div class="categorias-tuto">
+            <div>celular</div>
+          </div>
+          <a href="">Leia mais</a>
+        </div>
+      </div>
+      <div class="tuto-box">
+        <img src="./CSS/imagens/background-aboutus.jpg">
+        <div class="conteudo">
+          <h1>Titulo bem grande man grande mesmo to falando.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
+          <h3>Categoria:</h3>
+          <div class="categorias-tuto">
+            <div>celular</div>
+          </div>
+          <a href="">Leia mais</a>
+        </div>
+      </div>
+      <div class="tuto-box">
+        <img src="./CSS/imagens/background-aboutus.jpg">
+        <div class="conteudo">
+          <h1>Titulo bem grande man grande mesmo to falando.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
+          <h3>Categoria:</h3>
+          <div class="categorias-tuto">
+            <div>celular</div>
+          </div>
+          <a href="">Leia mais</a>
+        </div>
+      </div>
+      <div class="tuto-box">
+        <img src="./CSS/imagens/background-aboutus.jpg">
+        <div class="conteudo">
+          <h1>Titulo bem grande man grande mesmo to falando.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
+          <h3>Categoria:</h3>
+          <div class="categorias-tuto">
+            <div>celular</div>
+          </div>
+          <a href="">Leia mais</a>
+        </div>
+      </div>
+      <div class="tuto-box">
+        <img src="./CSS/imagens/background-aboutus.jpg">
+        <div class="conteudo">
+          <h1>Titulo bem grande man grande mesmo to falando.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
+          <h3>Categoria:</h3>
+          <div class="categorias-tuto">
+            <div>celular</div>
+          </div>
+          <a href="">Leia mais</a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Footer -->
   <div class="espacamento"></div>
