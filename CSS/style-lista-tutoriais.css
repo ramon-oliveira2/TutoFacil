@@ -1,107 +1,103 @@
-.row{
-	margin: 25px 0 0 0;
-	padding: 0;
-	font-size: 1rem;
-	line-height: 1.6;
-	font-weight: 400;
-	background-color: aliceblue;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.row {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.tuto-div{
-	width: 80%;
-	padding: 20px 0;
-	display: flex;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	grid-gap: 10px;
+.tuto-div {
+  width: 80%;
+  padding: 20px 0;
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 10px;
 }
 
-.tuto-div h1{
-	font-size: 1.2rem;
-	line-height: 1.2;
-	margin: 10px 15px 30px;
-	
+.tuto-div h1 {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin: 10px 15px 30px;
 }
 
-.tuto-box{
-	width: auto;
-	max-height: auto;
-	margin: 15px 10px;
-	border-radius: 5px;
-	box-shadow: 0 0 5px 1px rgb(182, 181, 181);
-	transition: 0.5s;
+.tuto-box {
+  width: auto;
+  max-height: auto;
+  margin: 15px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px rgb(182, 181, 181);
+  transition: 0.5s;
 }
 
-.tuto-box .conteudo{
-	width: 100%;
-	height: auto;
-	background-color: white;
+.tuto-box .conteudo {
+  width: 100%;
+  height: auto;
+  background-color: white;
 }
 
-.tuto-box .conteudo p, h3{
-	text-align: left;
-	opacity: 0.7;
-	line-height: 1.5;
-	max-height: 100px;
-	overflow: hidden;
-	margin: 10px 20px;
+.tuto-box .conteudo p,
+h3 {
+  text-align: left;
+  opacity: 0.7;
+  line-height: 1.5;
+  max-height: 100px;
+  overflow: hidden;
+  margin: 10px 20px;
 }
 
-.tuto-box img{
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: auto;
+.tuto-box img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 
-.tuto-box .conteudo .categorias-tuto div{
-	text-align: center;
-	padding: 0 10px;
-	border-radius: 10px;
-	box-shadow: 0 0 5px 1px white;
-	background-color: rgb(233, 233, 233);
-	width: auto;
+.tuto-box .conteudo .categorias-tuto div {
+  text-align: center;
+  padding: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px white;
+  background-color: rgb(233, 233, 233);
+  width: auto;
 }
 
-.tuto-box .conteudo .categorias-tuto{
-	background-color: rgb(241, 241, 241);
-	padding: 10px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: left;
-	width: auto;
-	height: auto;
-	margin: 10px 20px;
-	border-radius: 10px;
+.tuto-box .conteudo .categorias-tuto {
+  background-color: rgb(241, 241, 241);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: auto;
+  height: auto;
+  margin: 10px 20px;
+  border-radius: 10px;
 }
 
-.tuto-box .conteudo a{
-	margin: 0 20px;
-}
-
-.tuto-box div:hover{
-    background: #11998e; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to bottom,
-      #38ef7d,
-      #11998e
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to bottom,
-      #38ef7d,
-      #11998e
-	); 
-	box-shadow: 0 0 5px 3px rgb(199, 199, 199);
-}
-
-.tuto-box div:hover img{
-	opacity: 0.9;
+.tuto-box .conteudo a {
+  margin: 0 20px;
 }
 
 .tuto-box div:hover {
-	background-color: rgb(233, 233, 233);
+  background: #11998e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #38ef7d,
+    #11998e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #38ef7d, #11998e);
+  box-shadow: 0 0 5px 3px rgb(199, 199, 199);
+}
+
+.tuto-box div:hover img {
+  opacity: 0.9;
+}
+
+.tuto-box div:hover {
+  background-color: rgb(233, 233, 233);
 }
