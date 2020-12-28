@@ -14,10 +14,9 @@
 	width: 80%;
 	padding: 20px 0;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-gap: 10px;
 }
 
 .tuto-div h1{
@@ -28,12 +27,12 @@
 }
 
 .tuto-box{
-	width: 25%;
-	min-height: 300px;
+	width: auto;
 	max-height: auto;
 	margin: 15px 10px;
 	border-radius: 5px;
 	box-shadow: 0 0 5px 1px rgb(182, 181, 181);
+	transition: 0.5s;
 }
 
 .tuto-box .conteudo{
@@ -52,6 +51,8 @@
 }
 
 .tuto-box img{
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: auto;
 }
@@ -72,10 +73,35 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: left;
-	width: 100%;
+	width: auto;
 	height: auto;
+	margin: 10px 20px;
+	border-radius: 10px;
 }
 
 .tuto-box .conteudo a{
 	margin: 0 20px;
+}
+
+.tuto-box div:hover{
+    background: #11998e; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      #38ef7d,
+      #11998e
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #38ef7d,
+      #11998e
+	); 
+	box-shadow: 0 0 5px 3px rgb(199, 199, 199);
+}
+
+.tuto-box div:hover img{
+	opacity: 0.9;
+}
+
+.tuto-box div:hover {
+	background-color: rgb(233, 233, 233);
 }
