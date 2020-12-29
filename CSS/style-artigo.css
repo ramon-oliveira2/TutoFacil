@@ -18,9 +18,14 @@ main {
   width: 55.5rem;
 }
 
+.main-title h1, h2, h3{
+  margin: 10px 0;
+}
+
 .main-title h1 {
   font-size: 56px;
   color: #111111;
+  
 }
 
 .main-title h2 {
@@ -59,7 +64,6 @@ main {
 }
 
 .figure-conteiner img {
-  display: none;
   width: 40.7rem;
   margin: 10px 0 5px 0;
 }
@@ -67,7 +71,6 @@ main {
 .figure-conteiner label {
   color: #555555;
   font-size: 12px;
-  display: none;
 }
 
 .article-body ul, ol{
