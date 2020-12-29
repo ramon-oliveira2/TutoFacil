@@ -70,6 +70,21 @@
     <article class="article" id="article">
         <h1>Artigos Em Destaque</h1>
         <div class="article__wrapper">
+            <?php
+                require_once('conexao.php');
+                
+                $query = "SELECT * FROM temas WHERE id_tema BETWEEN 1 AND 4";
+                $resultado = mysqli_query($conexao, $query);
+                while ($array = mysqli_fetch_array($resultado)) {
+                    $id = $array['id_tema'];
+                    $titulo_tema = $array['titulo'];
+            ?>
+            <div class="article__card">
+                <h2><?php echo $titulo_tema ?></h2>
+                <div class="article__btn"><a href="modelo_artigo.php?<?php echo $id ?>"><button>Ler Mais</button></a></div>
+            </div>
+            <?php } ?>
+            <!--
             <div class="article__card">
                 <h2>Lorem ipsum dolor sit amet</h2>
                 <p>Lorem ipsum dolor sit amet consectetur</p>
@@ -84,12 +99,7 @@
                 <h2>Lorem ipsum dolor sit amet</h2>
                 <p>Lorem ipsum dolor sit amet consectetur</p>
                 <div class="article__btn"><button>Ler Mais</button></div>
-            </div>
-            <div class="article__card">
-                <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet consectetur</p>
-                <div class="article__btn"><button>Ler Mais</button></div>
-            </div>
+            </div>-->
         </div>
     </article>
 
