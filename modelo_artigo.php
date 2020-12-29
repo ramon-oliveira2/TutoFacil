@@ -43,39 +43,28 @@
       <div class="article-content"> <!-- div que centraliza o conteúdo -->
         <div class="title"> 
           <div class="main-title"> <!-- Div que envolve o titulo e subtitulo -->
-            <h1> <!-- Titulo -->
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-              adipisci veniam quo.
-            </h1>
-            <h2> <!-- Subtpitulo -->
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-              mollitia nulla molestiae dolorum molestias iusto, amet et dicta
-              minima tempora corporis alias quidem saepe, voluptate nobis quo.
-            </h2>
-          </div>
-          <div class="autor"> <!-- div que envolve o autor -->
-            <p>Por Ramon Oliveira</p>
-            <span>28/12/2020</span>
-          </div>
-          <hr>
-        </div>
-        <div class="article-body"> <!-- Div que vai conter o contudo do artigo -->
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit repellendus cupiditate delectus doloremque nam iste, ab molestiae? Consequuntur, ea ratione. Aspernatur debitis aliquid error consequuntur rerum enim labore repellat provident!Fugit distinctio quos, porro sed adipisci impedit tenetur repellat itaque, aliquid optio eligendi in, sit nostrum perspiciatis nobis? Temporibus expedita dolorem corporis hic asperiores voluptatum architecto distinctio delectus voluptas dolorum!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam blanditiis laudantium sunt, laborum reiciendis corrupti cum quisquam, nam beatae sed natus reprehenderit sapiente maiores? Ducimus dolorem dolores quis praesentium excepturi.</p>
+          <?php
+            require_once("conexao.php");
 
-          <div class="figure-conteiner"> <!-- Sempre que for colocar uma imagem usar esse tipo de estrutura -->
-            <img src="CSS/imagens/background-all.jpg">
-            <label>Foto de exemplo</label>
+            if (isset($_GET['id'])) {
+              $id_tema = $_GET['id'];
+              $query = "SELECT * FROM temas WHERE id_tema LIKE '$id_tema'";
+            } else {
+              header('Location: index.php');
+            }
+            $resultado = mysqli_query($conexao, $query);
+            while ($array = mysqli_fetch_array($resultado)) {
+              $id = $array['id_tema'];
+              $titulo_tema = $array['titulo'];
+              $texto = $array['texto'];
+            ?>
+            <h1 class="title"><?php echo $titulo_tema ?></h1>
           </div>
+      </div>
+      <div class="article-body">
+        <p><?php echo $texto; ?></p>
+        <?php } ?>
 
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia molestiae ad nostrum quas dicta sint eaque veniam exercitationem velit, aut libero, cumque incidunt blanditiis facere minima consequuntur. Harum, dolore reiciendis.
-          Eaque molestiae numquam architecto nesciunt aliquam cum repudiandae. Dolor ullam atque voluptatem, sint et eius repellat sit voluptas tempore amet dignissimos, temporibus, voluptatum mollitia. Distinctio tenetur incidunt atque animi itaque?
-          Repudiandae, quasi omnis tempora corporis velit modi consequatur magnam excepturi molestiae itaque, nisi veniam minus sed dolorem non ipsum aspernatur voluptas recusandae corrupti vitae quae? Ipsum dolore dignissimos amet? Tempore!
-          Tempora possimus quam similique facere, officia fugiat nesciunt temporibus accusamus eos ratione, quod, quasi saepe sequi delectus reprehenderit odit natus cumque aspernatur eum! Voluptas quae fuga architecto dolorum quo. Ad!</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non nobis atque quam harum voluptatum, dolores vitae distinctio dolor quos cumque sit! Illo est recusandae error possimus quasi ipsum id nemo?
-          Voluptatibus exercitationem tenetur esse quia quis blanditiis quam assumenda officiis totam rem illo soluta earum quidem quae, voluptates consequatur praesentium illum corrupti omnis. Quasi eum praesentium deleniti minus asperiores dolor?
-          Nostrum tempora eius corrupti error officiis magnam maxime veniam perspiciatis consectetur delectus, commodi illo odio provident officia, amet assumenda! Excepturi vitae quas at voluptatibus minus unde commodi consequatur modi impedit!</p>
-        </div>
       </div>
     </main>
 
