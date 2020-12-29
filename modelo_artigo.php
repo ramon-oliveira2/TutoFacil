@@ -43,23 +43,23 @@
       <div class="article-content"> <!-- div que centraliza o conteúdo -->
         <div class="title"> 
           <div class="main-title"> <!-- Div que envolve o titulo e subtitulo -->
-          <?php 
+          <?php
             require_once("conexao.php");
-            $id = $_GET['id'];
-            
-            try{
-                $stmt = $pdo->query("SELECT texto FROM temas WHERE id = '".$id."'");
-                $stmt->execute();
-                $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                
-                foreach ($res as $lista) {
-                $t = $lista['texto'];
-                }
-                echo $t;
-              }catch(Exception $e){
-                echo "Erro ao logar".$e;
-              }
-            ?>
+
+            if (isset($_GET['id'])) {
+              $id_tema = $_GET['id'];
+              $query = "SELECT * FROM temas WHERE id_tema LIKE '$id_tema'";
+            } else {
+              header('Location: index.php');
+            }
+            $resultado = mysqli_query($conexao, $query);
+            while ($array = mysqli_fetch_array($resultado)) {
+              $id = $array['id_tema'];
+              $titulo_tema = $array['titulo'];
+              $texto = $array['texto'];
+              echo $texto;
+            }
+          ?>
           </div>
       </div>
     </main>
