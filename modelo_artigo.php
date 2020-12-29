@@ -57,14 +57,20 @@
               $id = $array['id_tema'];
               $titulo_tema = $array['titulo'];
               $texto = $array['texto'];
+              $autor = $array['autor'];
+              $data = $array['DATA'];
             ?>
             <h1 class="title"><?php echo $titulo_tema ?></h1>
           </div>
-      </div>
+          <div class="autor">
+            <p>Feito por <?php echo $autor ?></p>
+            <span>Data: <?php echo $data ?></span>
+          </div>
+          <hr>
+      </>
       <div class="article-body">
         <p><?php echo $texto; ?></p>
         <?php } ?>
-
       </div>
     </main>
 

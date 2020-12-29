@@ -62,8 +62,8 @@ include 'conexao.php';
           </div>
           <a href="modelo_artigo.php?id=<?php echo $id ?>Leia mais</a>
         </div>
+        <?php } ?>
       </div>
-      <?php } ?>
     </div>
   </div>
 
