@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+main {
+  font-family: "Open Sans", sans-serif;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Titulo, subtitulo e autor */
+
+.article-content {
+  margin: 0 auto;
+  width: 55.5rem;
+}
+
+.title {
+  margin: 0 auto;
+  width: 55.5rem;
+}
+
+.main-title h1 {
+  font-size: 56px;
+  color: #111111;
+}
+
+.main-title h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #555555;
+}
+
+.title .autor {
+  margin: 25px 0 55px 0;
+}
+
+.title .autor p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #555555;
+}
+
+.title .autor span {
+  font-size: 12px;
+  color: #555555;
+}
+
+/* Artigo em si */
+
+.article-body {
+  margin: 40px auto 40px auto;
+  width: 40.7rem;
+}
+
+.article-body p {
+  margin: 15px 0 15px 0;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: justify;
+}
+
+.figure-conteiner img {
+  width: 40.7rem;
+  margin: 10px 0 5px 0;
+}
+
+.figure-conteiner label {
+  color: #555555;
+  font-size: 12px;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1000px) {
+  .article-content {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .title {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .main-title h1 {
+    font-size: 32px;
+    color: #111111;
+  }
+
+  .main-title h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #555555;
+  }
+
+  .title .autor {
+    font-size: 14px;
+  }
+
+  .article-body {
+    width: auto;
+  }
+
+  .article-body p {
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .figure-conteiner img {
+    width: 100%;
+  }
+}
