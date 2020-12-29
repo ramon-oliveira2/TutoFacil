@@ -66,5 +66,6 @@ section{
 	}
 	.inner-container{
 		padding: 60px;
-	}
+		border-radius: 0%;
+	}	
 }

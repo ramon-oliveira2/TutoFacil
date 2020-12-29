@@ -60,10 +60,10 @@ include 'conexao.php';
             <div>
             </div>
           </div>
-          <a href="show-tuto.php?id=<?php echo $id ?>
+          <a href="modelo_artigo.php?id=<?php echo $id ?>Leia mais</a>
         </div>
-        <?php } ?>
       </div>
+      <?php } ?>
     </div>
   </div>
 
