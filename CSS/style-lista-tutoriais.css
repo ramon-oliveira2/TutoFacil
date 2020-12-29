@@ -13,7 +13,6 @@
 .tuto-div {
   width: 94%;
   padding: 20px 0;
-  display: flex;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 10px;
@@ -58,6 +57,15 @@ h3 {
   height: auto;
 }
 
+.tuto-box .text{
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.tuto-box .text h2{
+  padding: 0 20px;
+}
+/*
 .tuto-box .conteudo .categorias-tuto div {
   text-align: center;
   padding: 0 10px;
@@ -78,7 +86,7 @@ h3 {
   height: auto;
   margin: 10px 20px;
   border-radius: 10px;
-}
+}*/
 
 .tuto-box .conteudo a {
   margin: 0 20px;
