@@ -57,10 +57,14 @@
               $id = $array['id_tema'];
               $titulo_tema = $array['titulo'];
               $texto = $array['texto'];
-              echo $texto;
-            }
-          ?>
+            ?>
+            <h1 class="title"><?php echo $titulo_tema ?></h1>
           </div>
+      </div>
+      <div class="article-body">
+        <p><?php echo $texto; ?></p>
+        <?php } ?>
+
       </div>
     </main>
 
