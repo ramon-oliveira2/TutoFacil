@@ -59,7 +59,6 @@ include 'conexao.php';
             $id = $array['id_tema'];
             $titulo_tema = $array['titulo'];
             $texto = $array['texto'];
-
           ?>
             <h1><a href="show-tuto.php?id=<?php echo $id ?>"><?php echo $titulo_tema ?></a></h1>
             <div class="descrição">

@@ -42,173 +42,27 @@ include 'conexao.php';
 
   <div class="row">
     <div class="tuto-div">
+    <?php
+      $query = "SELECT * FROM temas ORDER BY titulo ASC";
+      $resultado = mysqli_query($conexao, $query);
+      while ($array = mysqli_fetch_array($resultado)) {
+        $id = $array['id_tema'];
+        $titulo_tema = $array['titulo'];
+        $texto = $array['texto'];
+      ?>
       <div class="tuto-box" id="tuto-box">
         <div class="conteudo">
           <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
+          <h1><?php echo $titulo_tema ?></h1>
+          <p><?php echo $texto ?></p>
           <h3>Categoria:</h3>
           <div class="categorias-tuto">
-            <div>celular</div>
+            <div>
+            </div>
           </div>
-          <a href="">Leia mais</a>
+          <a href="show-tuto.php?id=<?php echo $id ?>
         </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
-      </div>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1>Titulo bem grande man grande mesmo to falando.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ea, minus asperiores cupiditate natus, iure aut hic, quis blanditiis iusto nihil obcaecati aliquid ipsa repellat quidem? Nostrum quia nam atque!</p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>celular</div>
-          </div>
-          <a href="">Leia mais</a>
-        </div>
+        <?php } ?>
       </div>
     </div>
   </div>
