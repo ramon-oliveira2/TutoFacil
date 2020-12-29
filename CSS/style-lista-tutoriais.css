@@ -4,14 +4,14 @@
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 400;
-  background-color: aliceblue;
+  background-color: #f7f7fa;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .tuto-div {
-  width: 80%;
+  width: 94%;
   padding: 20px 0;
   display: flex;
   display: grid;
@@ -21,6 +21,7 @@
 
 .tuto-div h1 {
   font-size: 1.2rem;
+  color: #015249;
   line-height: 1.2;
   margin: 10px 15px 30px;
 }
@@ -83,21 +84,39 @@ h3 {
   margin: 0 20px;
 }
 
-.tuto-box div:hover {
-  background: #11998e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #38ef7d,
-    #11998e
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #38ef7d, #11998e);
-  box-shadow: 0 0 5px 3px rgb(199, 199, 199);
-}
-
 .tuto-box div:hover img {
   opacity: 0.9;
 }
 
-.tuto-box div:hover {
-  background-color: rgb(233, 233, 233);
+.ler-mais {
+  position: relative;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.ler-mais button {
+  background: #ffffff;
+  padding: 20px 60px;
+  border: 2px solid #015249;
+  border-radius: 4px;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #015249;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.ler-mais button:hover {
+  color: #ffffff;
+  background: #015249;
+}
+

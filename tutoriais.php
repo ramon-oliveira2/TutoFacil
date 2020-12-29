@@ -42,7 +42,7 @@ include 'conexao.php';
 
   <div class="row">
     <div class="tuto-div">
-    <?php
+      <?php
       $query = "SELECT * FROM temas ORDER BY titulo ASC";
       $resultado = mysqli_query($conexao, $query);
       while ($array = mysqli_fetch_array($resultado)) {
@@ -50,19 +50,21 @@ include 'conexao.php';
         $titulo_tema = $array['titulo'];
         $texto = $array['texto'];
       ?>
-      <div class="tuto-box" id="tuto-box">
-        <div class="conteudo">
-          <img src="./CSS/imagens/background-aboutus.jpg">
-          <h1><?php echo $titulo_tema ?></h1>
-          <p><?php echo $texto ?></p>
-          <h3>Categoria:</h3>
-          <div class="categorias-tuto">
-            <div>
+        <div class="tuto-box" id="tuto-box">
+          <div class="conteudo">
+            <img src="./CSS/imagens/background-aboutus.jpg">
+            <h1><?php echo $titulo_tema ?></h1>
+            <p><?php echo $texto ?></p>
+            <h3>Categoria:</h3>
+            <div class="categorias-tuto">
+              <div>
+              </div>
+            </div>
+            <div class="ler-mais">
+              <a href="modelo_artigo.php?id=<?php echo $id ?>" <button>Ler Mais</button></a>
             </div>
           </div>
-          <a href="modelo_artigo.php?id=<?php echo $id ?>Leia mais</a>
         </div>
-      </div>
       <?php } ?>
     </div>
   </div>
