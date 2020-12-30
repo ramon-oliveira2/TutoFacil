@@ -165,7 +165,7 @@
     outline: none;
   }
   
-  .main__btn a {
+  .main__btn span {
     position: relative;
     z-index: 1;
     color: #ffffff;
@@ -366,6 +366,12 @@
     text-align: center;
     margin-top: 24px;
     font-size: 20px;
+  }
+
+  .article__card a{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
   }
   
   .article__btn {

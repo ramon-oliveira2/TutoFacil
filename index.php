@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TutoFacil - Home</title>
-    <link rel="stylesheet" type="text/css" href="CSS/style-home.css"/>
-    <link rel="stylesheet" type="text/css" href="CSS/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="CSS/style-navbar.css"/>
-    <link rel="stylesheet" type="text/css" href="CSS/footer.css"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link rel="stylesheet" type="text/css" href="CSS/style-home.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/style-navbar.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/footer.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -27,7 +27,7 @@
         </ul>
         <div class="search-icon"><span class="fas fa-search"></span></div>
         <div class="cancel-icon"><span class="fas fa-times"></span></div>
-        <form action="tutoriais.php" method="get">
+        <form action="tutoriais_pesquisa.php" method="get">
             <input type="search" name="txtpesquisar" class="search-data" placeholder="Pesquisar" required />
             <button type="submit" class="fas fa-search" name="pesquisar"></button>
         </form>
@@ -42,9 +42,10 @@
         <div class="header__container">
             <h1 class="header__heading">A vida é um <span>Aprendizado</span></h1>
             <p class="header__description">Sua dúvida, nossa solução!</p>
-            <button class="main__btn"><a href="#">Leia Agora</a></button>
+            <button class="main__btn" id="#down"><span id="#downyes">Leia Agora</span></button>
         </div>
     </div>
+    <script src="JS/scroll.js"></script>
 
     <!-- Fim do header -->
 
@@ -56,9 +57,9 @@
                 <div class="main__img--card"><i class="fas fa-users"></i></div>
             </div>
             <div class="main__content">
-                <h1><span>Lorem ipsum dolor</span></h1>
-                <h2>Lorem ipsum dolor sit amet consectetur</h2>
-                <button class="main__btn-2"><a href="#">Saiba Mais</a></button>
+                <h1><span>Não sabe como fazer um email?</span></h1>
+                <h2>No TutoFacil você encontra a resposta para suas dúvidas.</h2><br>
+                <h2>Explore nossos artigos e tutorias e aprenda mais sobre o mundo da informática!</h2>
             </div>
         </div>
     </div>
@@ -71,18 +72,18 @@
         <h1>Artigos Em Destaque</h1>
         <div class="article__wrapper">
             <?php
-                require_once('conexao.php');
-                
-                $query = "SELECT * FROM temas WHERE id_tema BETWEEN 1 AND 4";
-                $resultado = mysqli_query($conexao, $query);
-                while ($array = mysqli_fetch_array($resultado)) {
-                    $id = $array['id_tema'];
-                    $titulo_tema = $array['titulo'];
+            require_once('conexao.php');
+
+            $query = "SELECT * FROM temas WHERE id_tema BETWEEN 1 AND 4";
+            $resultado = mysqli_query($conexao, $query);
+            while ($array = mysqli_fetch_array($resultado)) {
+                $id = $array['id_tema'];
+                $titulo_tema = $array['titulo'];
             ?>
-            <div class="article__card">
-                <h2><?php echo $titulo_tema ?></h2>
-                <div class="article__btn"><button><a href="modelo_artigo.php?<?php echo $id ?>">Ler Mais</a></button></div>
-            </div>
+                <div class="article__card">
+                    <h2><?php echo $titulo_tema ?></h2>
+                    <div class="article__btn"><button><a href="modelo_artigo.php?id=<?php echo $id ?>">Ler Mais</a></button></div>
+                </div>
             <?php } ?>
             <!--
             <div class="article__card">
@@ -114,10 +115,9 @@
                 <h2>Considerações</h2>
                 <div class="content">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab iure
-                        quidem voluptas possimus repellat dicta quam pariatur atque enim
-                        quod optio libero, ipsa totam ut eaque suscipit fugit numquam
-                        perferendis?
+                        Este projeto foi uma colaboração feita entre os alunos da EEEP
+                        Professor César Campelo da turma de 3º ano do Curso Técnico em Informática.
+                        Nos dispomos a solucionar qualquer problema que envolva o site. Qualquer dúvida entre em contato conosco.
                     </p>
                 </div>
             </div>

@@ -31,7 +31,7 @@ include 'conexao.php';
     </ul>
     <div class="search-icon"><span class="fas fa-search"></span></div>
     <div class="cancel-icon"><span class="fas fa-times"></span></div>
-    <form action="tutoriais.php" method="get">
+    <form action="tutoriais_pesquisa.php" method="get">
       <input type="search" name="txtpesquisar" class="search-data" placeholder="Pesquisar" required>
       <button type="submit" name="pesquisar" class="fas fa-search"></button>
     </form>
@@ -44,8 +44,8 @@ include 'conexao.php';
     <div class="tuto-div">
       <?php
       require_once('conexao.php');
-      
-      $query = "SELECT * FROM temas ORDER BY titulo ASC";
+
+      $query = "SELECT * FROM temas ORDER BY titulo ASC";  
       $resultado = mysqli_query($conexao, $query);
       while ($array = mysqli_fetch_array($resultado)) {
         $id = $array['id_tema'];
@@ -64,9 +64,9 @@ include 'conexao.php';
             </div>
           </div>
         </div>
-        <?php } ?>
-      </div>
+      <?php } ?>
     </div>
+  </div>
   </div>
 
   <!-- Footer -->
@@ -78,10 +78,9 @@ include 'conexao.php';
         <h2>Considerações</h2>
         <div class="content">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab iure
-            quidem voluptas possimus repellat dicta quam pariatur atque enim
-            quod optio libero, ipsa totam ut eaque suscipit fugit numquam
-            perferendis?
+            Este projeto foi uma colaboração feita entre os alunos da EEEP
+            Professor César Campelo da turma de 3º ano do Curso Técnico em Informática.
+            Nos dispomos a solucionar qualquer problema que envolva o site. Qualquer dúvida entre em contato conosco.
           </p>
         </div>
       </div>
