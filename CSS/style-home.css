@@ -367,6 +367,12 @@
     margin-top: 24px;
     font-size: 20px;
   }
+
+  .article__card a{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
   
   .article__btn {
     display: flex;

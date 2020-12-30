@@ -27,7 +27,7 @@
         </ul>
         <div class="search-icon"><span class="fas fa-search"></span></div>
         <div class="cancel-icon"><span class="fas fa-times"></span></div>
-        <form action="tutoriais.php" method="get">
+        <form action="tutoriais_pesquisa.php" method="get">
             <input type="search" name="txtpesquisar" class="search-data" placeholder="Pesquisar" required>
             <button type="submit" name="pesquisar" class="fas fa-search"></button>
         </form>

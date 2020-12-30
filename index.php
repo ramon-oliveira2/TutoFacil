@@ -27,7 +27,7 @@
         </ul>
         <div class="search-icon"><span class="fas fa-search"></span></div>
         <div class="cancel-icon"><span class="fas fa-times"></span></div>
-        <form action="tutoriais.php" method="get">
+        <form action="tutoriais_pesquisa.php" method="get">
             <input type="search" name="txtpesquisar" class="search-data" placeholder="Pesquisar" required />
             <button type="submit" class="fas fa-search" name="pesquisar"></button>
         </form>
@@ -74,7 +74,7 @@
             <?php
             require_once('conexao.php');
 
-            $query = "SELECT * FROM temas WHERE id_tema BETWEEN 1 AND 4";
+            $query = "SELECT * FROM temas WHERE id_tema <= 4";
             $resultado = mysqli_query($conexao, $query);
             while ($array = mysqli_fetch_array($resultado)) {
                 $id = $array['id_tema'];
@@ -82,7 +82,7 @@
             ?>
                 <div class="article__card">
                     <h2><?php echo $titulo_tema ?></h2>
-                    <div class="article__btn"><a href="modelo_artigo.php?<?php echo $id ?>"><button>Ler Mais</button></a></div>
+                    <div class="article__btn"><button><a href="modelo_artigo.php?id=<?php echo $id ?>">Ler Mais</a></button></div>
                 </div>
             <?php } ?>
             <!--

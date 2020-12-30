@@ -40,35 +40,42 @@ include 'conexao.php';
 
   <!-- Término do menu de navegação  -->
 
-  <section>
-    <div class="list-div">
-      <div class="tuto-div">
-        <span id="h1-div">
-          <h2>Lista de Tutoriais</h2>
-        </span>
-        <div>
-          <?php
-          if (isset($_GET['id'])) {
-            $id_tema = $_GET['id'];
-            $query = 'SELECT * FROM temas WHERE id_tema LIKE "%'$id_tema'%"';
-          } else {
-            header('Location: index.php');
-          }
-          $resultado = mysqli_query($conexao, $query);
-          while ($array = mysqli_fetch_array($resultado)) {
-            $id = $array['id_tema'];
-            $titulo_tema = $array['titulo'];
-            $texto = $array['texto'];
-          ?>
-            <h1><a href="show-tuto.php?id=<?php echo $id ?>"><?php echo $titulo_tema ?></a></h1>
-            <div class="descrição">
-              <?php echo $texto ?>
+  <div class="row">
+    <div class="tuto-div">
+      <?php
+      require_once('conexao.php');
+
+      
+      if(isset($_GET['txtpesquisar'])){
+        $txtpesquisar = $_GET['txtpesquisar'];
+        $query = "SELECT * FROM temas WHERE titulo LIKE '%$txtpesquisar%'";
+        
+      }else{
+        header('Location: tutoriais.php');
+      }
+
+      $resultado = mysqli_query($conexao, $query);
+      while ($array = mysqli_fetch_array($resultado)) {
+        $id = $array['id_tema'];
+        $titulo_tema = $array['titulo'];
+        $texto = $array['texto'];
+      ?>
+        <div class="tuto-box" id="tuto-box">
+          <div class="conteudo">
+            <img src="./CSS/imagens/background-aboutus.jpg">
+            <h1><?php echo $titulo_tema ?></h1>
+            <div class="text">
+              <p><?php echo $texto ?></p>
             </div>
-          <?php } ?>
+            <div class="ler-mais">
+              <a href="modelo_artigo.php?id=<?php echo $id ?>"> <button>Ler Mais</button></a>
+            </div>
+          </div>
         </div>
-      </div>
+      <?php } ?>
     </div>
-  </section>
+  </div>
+  </div>
 
   <!-- Footer -->
   <div class="espacamento"></div>
@@ -126,6 +133,7 @@ include 'conexao.php';
       </center>
     </div>
   </footer>
+
 
 </body>
 
