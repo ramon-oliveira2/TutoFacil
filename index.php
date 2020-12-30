@@ -42,9 +42,10 @@
         <div class="header__container">
             <h1 class="header__heading">A vida é um <span>Aprendizado</span></h1>
             <p class="header__description">Sua dúvida, nossa solução!</p>
-            <button class="main__btn"><a href="#">Leia Agora</a></button>
+            <button class="main__btn" id="#down"><span id="#downyes">Leia Agora</span></button>
         </div>
     </div>
+    <script src="JS/scroll.js"></script>
 
     <!-- Fim do header -->
 
