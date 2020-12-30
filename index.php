@@ -81,7 +81,7 @@
             ?>
             <div class="article__card">
                 <h2><?php echo $titulo_tema ?></h2>
-                <div class="article__btn"><a href="modelo_artigo.php?<?php echo $id ?>"><button>Ler Mais</button></a></div>
+                <div class="article__btn"><button><a href="modelo_artigo.php?<?php echo $id ?>">Ler Mais</a></button></div>
             </div>
             <?php } ?>
             <!--
