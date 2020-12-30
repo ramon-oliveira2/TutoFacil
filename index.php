@@ -74,7 +74,7 @@
             <?php
             require_once('conexao.php');
 
-            $query = "SELECT * FROM temas WHERE id_tema BETWEEN 1 AND 4";
+            $query = "SELECT * FROM temas WHERE id_tema <= 4";
             $resultado = mysqli_query($conexao, $query);
             while ($array = mysqli_fetch_array($resultado)) {
                 $id = $array['id_tema'];
