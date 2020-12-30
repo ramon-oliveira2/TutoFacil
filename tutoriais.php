@@ -43,6 +43,8 @@ include 'conexao.php';
   <div class="row">
     <div class="tuto-div">
       <?php
+      require_once('conexao.php');
+      
       $query = "SELECT * FROM temas ORDER BY titulo ASC";
       $resultado = mysqli_query($conexao, $query);
       while ($array = mysqli_fetch_array($resultado)) {
@@ -54,18 +56,16 @@ include 'conexao.php';
           <div class="conteudo">
             <img src="./CSS/imagens/background-aboutus.jpg">
             <h1><?php echo $titulo_tema ?></h1>
-            <p><?php echo $texto ?></p>
-            <h3>Categoria:</h3>
-            <div class="categorias-tuto">
-              <div>
-              </div>
+            <div class="text">
+              <p><?php echo $texto ?></p>
             </div>
             <div class="ler-mais">
-              <a href="modelo_artigo.php?id=<?php echo $id ?>" <button>Ler Mais</button></a>
+              <a href="modelo_artigo.php?id=<?php echo $id ?>"> <button>Ler Mais</button></a>
             </div>
           </div>
         </div>
-      <?php } ?>
+        <?php } ?>
+      </div>
     </div>
   </div>
 
