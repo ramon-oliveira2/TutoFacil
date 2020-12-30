@@ -44,7 +44,7 @@ include 'conexao.php';
     <div class="tuto-div">
       <?php
       require_once('conexao.php');
-      
+
       $query = "SELECT * FROM temas ORDER BY titulo ASC";
       $resultado = mysqli_query($conexao, $query);
       while ($array = mysqli_fetch_array($resultado)) {
@@ -64,9 +64,9 @@ include 'conexao.php';
             </div>
           </div>
         </div>
-        <?php } ?>
-      </div>
+      <?php } ?>
     </div>
+  </div>
   </div>
 
   <!-- Footer -->
@@ -78,10 +78,9 @@ include 'conexao.php';
         <h2>Considerações</h2>
         <div class="content">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab iure
-            quidem voluptas possimus repellat dicta quam pariatur atque enim
-            quod optio libero, ipsa totam ut eaque suscipit fugit numquam
-            perferendis?
+            Este projeto foi uma colaboração feita entre os alunos da EEEP
+            Professor César Campelo da turma de 3º ano do Curso Técnico em Informática.
+            Nos dispomos a solucionar qualquer problema que envolva o site. Qualquer dúvida entre em contato conosco.
           </p>
         </div>
       </div>
