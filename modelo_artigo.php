@@ -53,16 +53,14 @@
           $resultado = mysqli_query($conexao, $query);
           while ($array = mysqli_fetch_array($resultado)) {
             $id = $array['id_tema'];
-            $titulo_tema = $array['titulo'];
-            $texto = $array['texto'];
-            $autor = $array['autor'];
-            $data = $array['DATA'];
+            $titulo_tema = utf8_encode($array['titulo']);
+            $texto = utf8_encode($array['texto']);
+            $autor = utf8_encode($array['autor']);
           ?>
             <h1 class="title"><?php echo $titulo_tema ?></h1>
         </div>
         <div class="autor">
           <p>Feito por <?php echo $autor ?></p>
-          <span>Data: <?php echo $data ?></span>
         </div>
         <hr>
         </>

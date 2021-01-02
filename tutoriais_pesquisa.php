@@ -57,8 +57,8 @@ include 'conexao.php';
       $resultado = mysqli_query($conexao, $query);
       while ($array = mysqli_fetch_array($resultado)) {
         $id = $array['id_tema'];
-        $titulo_tema = $array['titulo'];
-        $texto = $array['texto'];
+        $titulo_tema = utf8_encode($array['titulo']);
+        $texto = utf8_encode($array['texto']);
       ?>
         <div class="tuto-box" id="tuto-box">
           <div class="conteudo">
