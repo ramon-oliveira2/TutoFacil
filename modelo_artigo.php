@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nome Artigo</title>
+  <title> TutoFacil - Tutorial</title>
   <link rel="stylesheet" type="text/css" href="CSS/style-navbar.css" />
   <link rel="stylesheet" type="text/css" href="CSS/normalize.css" />
   <link rel="stylesheet" type="text/css" href="CSS/style-artigo.css" />
@@ -61,6 +61,7 @@
         </div>
         <div class="autor">
           <p>Feito por <?php echo $autor ?></p>
+
         </div>
         <hr>
         </>
