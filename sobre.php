@@ -41,7 +41,32 @@
             <div class="inner-container">
                 <h1>Sobre nós</h1>
                 <p class="text">
-                    Esse projeto tem como objetivo informar sobre assuntos relevantes sobre tecnologia de uma forma simples e flexível para pessoas de todas as idades.
+                    TutoFacil é um projeto criado por alunos do 3° ano do Curso Técnico de Informática da instituição de ensino Professor César Campelo, que tem por objetivo propiciar o esclarecimento sobre o uso da tecnologia para os indivíduos que vivem nas comunidades próximas a escola. Dessa forma, eles terão acesso a tutoriais por videoaulas e artigos escritos, simples e práticos, para que consigam entender e usar ferramentas de dispositivos móveis e computadores, além de aprenderem mais sobre as funcionalidades dos recursos disponíveis na Internet.
+                </p>
+                <h2>Equipe do Projeto:</h2>
+                <h3>Desenvolvedores Back-End:</h3>
+                <p class="text2">
+                    Ivina Silva Sousa,<br>
+                    Jose Neilson Viana do Nascimento,<br>
+                    Marcus Vinicius Nogueira de Andrade Lima.
+                </p>
+
+                <h3>Desenvolvedores Front-End:</h3>
+                <p class="text2">
+                    Emanuel Vasconcelos Nobre,<br>
+                    Ramon Santos de Oliveira.
+                </p>
+
+                <h3>Redatores:</h3>
+                <p class="text2">
+                    Ayane Maria Moraes Lopes,<br>
+                    Eduarda Maria Teixeira Costa,<br>
+                    Francisco Kaua dos Santos Fernandes,<br>
+                    Jardel Rodrigues Soares,<br>
+                    Marcos Paulo Gomes Veras,<br>
+                    Maria Gabriela Maciel Cavalcante,<br>
+                    Pedro Caetano da Silva,<br>
+                    Thayane Marcolino do Nascimento.
                 </p>
             </div>
         </div>
