@@ -68,6 +68,10 @@ main {
   margin: 10px 0 5px 0;
 }
 
+p > img{
+  margin: 0 auto;
+}
+
 .figure-conteiner label {
   color: #555555;
   font-size: 12px;
