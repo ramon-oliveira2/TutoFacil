@@ -78,7 +78,7 @@
             $resultado = mysqli_query($conexao, $query);
             while ($array = mysqli_fetch_array($resultado)) {
                 $id = $array['id_tema'];
-                $titulo_tema = $array['titulo'];
+                $titulo_tema = utf8_encode($array['titulo']);
             ?>
                 <div class="article__card">
                     <h2><?php echo $titulo_tema ?></h2>

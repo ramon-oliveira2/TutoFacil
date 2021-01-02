@@ -55,9 +55,9 @@ include 'conexao.php';
         <div class="tuto-box" id="tuto-box">
           <div class="conteudo">
             <img src="./CSS/imagens/background-aboutus.jpg">
-            <h1><?php echo $titulo_tema ?></h1>
+            <h1><?php echo utf8_encode($titulo_tema) ?></h1>
             <div class="text">
-              <p><?php echo $texto ?></p>
+              <p><?php echo utf8_encode($texto) ?></p>
             </div>
             <div class="ler-mais">
               <a href="modelo_artigo.php?id=<?php echo $id ?>"> <button>Ler Mais</button></a>
