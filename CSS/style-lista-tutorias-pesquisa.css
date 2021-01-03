@@ -25,12 +25,9 @@
 .tuto-box-search{
     background-color: rgb(253, 253, 253);
     width: 80%;
-    height: 200px;
+    height: auto;
     position: relative;
     margin: 5px;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
 }
 
 .tuto-box-search > .conteudo{
@@ -38,16 +35,15 @@
     height: auto;
     box-shadow: 1px 0 5px 1.5px rgba(128, 128, 128, 0.356);
     border-radius: 4px;
+    padding-bottom: 20px;
 }
 
 .tuto-box-search > .conteudo > h1{
     text-align: left;
     opacity: 0.7;
     line-height: 1.1;
-    font-size: 1.5rem;
-    overflow: hidden;
+    font-size: 1.4rem;
     margin: 10px 20px;
-    word-wrap: break-word;
     color: #11998e;
 }
 
@@ -59,8 +55,7 @@
 .tuto-box-search > .conteudo > .texto > p{
     text-align: left;
     opacity: 0.7;
-    line-height: 1.6;
-    max-height: 90px;
+    line-height: 1.5;
     margin: 10px 20px;
 }
 
@@ -71,7 +66,6 @@
 
 .tuto-box-search > .conteudo > .texto{
     overflow: hidden;
-    max-height: 90px;
-    min-height: 30px;
+    max-height: 100px;
     width: 100%;
 }
