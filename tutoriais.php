@@ -54,15 +54,17 @@ include 'conexao.php';
         $texto = $array['texto'];
       ?>
         <div class="tuto-box" id="tuto-box">
-          <div class="conteudo">
+          <div class="image">
             <img src="./CSS/imagens/background-aboutus.jpg">
+          </div>
+          <div class="conteudo">
             <h1><?php echo utf8_encode($titulo_tema) ?></h1>
-            <div class="text">
+          </div>
+          <div class="text">
               <p><?php echo utf8_encode($texto) ?></p>
-            </div>
-            <div class="ler-mais">
+          </div>
+          <div class="ler-mais">
               <a href="modelo_artigo.php?id=<?php echo $id ?>"> <button>Ler Mais</button></a>
-            </div>
           </div>
         </div>
       <?php } ?>

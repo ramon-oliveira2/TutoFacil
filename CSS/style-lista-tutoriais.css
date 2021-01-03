@@ -18,7 +18,7 @@
   grid-gap: 10px;
 }
 
-.tuto-div h1 {
+.tuto-box h1 {
   font-size: 1.2rem;
   color: #015249;
   line-height: 1.2;
@@ -32,16 +32,22 @@
   border-radius: 5px;
   box-shadow: 0 0 5px 1px rgb(182, 181, 181);
   transition: 0.5s;
+  background-color: #ffffff;
 }
 
-.tuto-box .conteudo {
+.tuto-box > div{
+  background-color: none;
+}
+
+.tuto-box > .conteudo { /*div do titulo*/
   width: 100%;
-  height: auto;
+  height: 75px;
   background-color: white;
 }
 
-.tuto-box .conteudo p,
-h3 {
+.tuto-box > .text p
+,
+.tuto-box > .conteudo h3 {
   text-align: left;
   opacity: 0.7;
   line-height: 1.5;
@@ -57,8 +63,8 @@ h3 {
   height: auto;
 }
 
-.tuto-box .text{
-  max-height: 150px;
+.tuto-box > .text{
+  max-height: 95px;
   overflow: hidden;
 }
 
@@ -98,7 +104,7 @@ h3 {
 
 .ler-mais {
   position: relative;
-  bottom: 10px;
+  margin-bottom: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
