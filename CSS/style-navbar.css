@@ -19,7 +19,7 @@ nav {
   padding: 0 100px;
   z-index: 2;
 }
-nav .logo a {
+nav .logo a  {
   text-decoration: none;
   color: #57bc90;
   font-size: 30px;
@@ -31,7 +31,15 @@ nav .nav-items {
   flex: 1;
   padding: 0 0 0 40px;
 }
-nav .nav-items li {
+
+nav .nav-items a {
+  text-decoration: none;
+}
+
+nav .nav-items a li {
+  color: #57bc90;
+  font-size: 18px;
+  font-weight: 500;
   padding: 0 15px;
   height: 70px;
   line-height: 70px;
@@ -42,7 +50,7 @@ nav .nav-items li:hover {
   background: #57bc90;
 }
 
-nav .nav-items li:hover a {
+nav .nav-items a:hover li {
   color: #ffffff;
 }
 
