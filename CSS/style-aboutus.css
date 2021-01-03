@@ -81,6 +81,9 @@ section {
     width: 100%;
     border-radius: 10px;
   }
+  .text2 {
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 922px) {
