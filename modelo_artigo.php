@@ -18,7 +18,7 @@
   <div class="arranjo_tecnico"></div>
   <nav>
     <div class="menu-icon"><span class="fas fa-bars"></span></div>
-    <div class="logo">TutoFacil</div>
+    <div class="logo"><a href="index.php">TutoFacil</a></div>
     <ul class="nav-items">
       <li><a href="index.php">Início</a></li>
       <li><a href="tutoriais.php">Artigos</a></li>
