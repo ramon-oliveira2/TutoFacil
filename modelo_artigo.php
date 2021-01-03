@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="CSS/normalize.css" />
   <link rel="stylesheet" type="text/css" href="CSS/style-artigo.css" />
   <link rel="stylesheet" type="text/css" href="CSS/footer.css" />
+  <link rel="shortcut icon" href="CSS/logo.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
