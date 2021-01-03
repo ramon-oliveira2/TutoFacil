@@ -54,7 +54,7 @@ nav .nav-items a:hover li {
   color: #ffffff;
 }
 
-nav .nav-items li a {
+nav .nav-items a li {
   text-decoration: none;
   color: #57bc90;
   font-size: 18px;

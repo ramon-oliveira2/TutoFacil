@@ -59,8 +59,8 @@
             </div>
             <div class="main__content">
                 <h1><span>Não sabe como fazer um email?</span></h1>
-                <h2>No TutoFacil você encontra a resposta para suas dúvidas.</h2><br>
-                <h2>Explore nossos artigos e tutorias e aprenda mais sobre o mundo da informática!</h2>
+                <h2>No TutoFacil você encontra a resposta para essa e outras dúvidas.</h2><br>
+                <h2>Explore nossos artigos, tutoriais e aprenda mais sobre o mundo da informática!</h2>
             </div>
         </div>
     </div>
