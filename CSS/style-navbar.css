@@ -19,7 +19,8 @@ nav {
   padding: 0 100px;
   z-index: 2;
 }
-nav .logo {
+nav .logo a {
+  text-decoration: none;
   color: #57bc90;
   font-size: 30px;
   font-weight: 600;
