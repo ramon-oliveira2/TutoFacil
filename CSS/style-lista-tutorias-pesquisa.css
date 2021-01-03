@@ -1,0 +1,77 @@
+.tuto-div-search{
+    background-color: rgba(252, 252, 252, 0.966);
+    width: 80%;
+    height: auto;
+    padding-bottom: 75px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.tuto-div-search > .header{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: auto;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    text-align: center;
+    color: #015249;
+}
+
+.tuto-box-search{
+    background-color: rgb(253, 253, 253);
+    width: 80%;
+    height: 200px;
+    position: relative;
+    margin: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.tuto-box-search > .conteudo{
+    width: 100%;
+    height: auto;
+    box-shadow: 1px 0 5px 1.5px rgba(128, 128, 128, 0.356);
+    border-radius: 4px;
+}
+
+.tuto-box-search > .conteudo > h1{
+    text-align: left;
+    opacity: 0.7;
+    line-height: 1.1;
+    font-size: 1.5rem;
+    overflow: hidden;
+    margin: 10px 20px;
+    word-wrap: break-word;
+    color: #11998e;
+}
+
+.tuto-box-search .conteudo:hover {
+    transform: scale(1.015);
+    transition: 0.2s ease-in;
+}
+
+.tuto-box-search > .conteudo > .texto > p{
+    text-align: left;
+    opacity: 0.7;
+    line-height: 1.6;
+    max-height: 90px;
+    margin: 10px 20px;
+}
+
+.tuto-box-search > .conteudo > h1, a{
+    text-decoration: none;
+    color: #11998e;
+}
+
+.tuto-box-search > .conteudo > .texto{
+    overflow: hidden;
+    max-height: 90px;
+    min-height: 30px;
+    width: 100%;
+}
