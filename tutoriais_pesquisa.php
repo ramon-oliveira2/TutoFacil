@@ -14,6 +14,7 @@ include 'conexao.php';
   <link rel="stylesheet" type="text/css" href="CSS/style-navbar.css">
   <link rel="stylesheet" type="text/css" href="CSS/footer.css">
   <link rel="stylesheet" type="text/css" href="CSS/style-lista-tutoriais.css">
+  <link rel="stylesheet" type="text/css" href="CSS/style-lista-tutorias-pesquisa.css">
   <link rel="shortcut icon" href="CSS/logo.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -32,7 +33,7 @@ include 'conexao.php';
     </ul>
     <div class="search-icon"><span class="fas fa-search"></span></div>
     <div class="cancel-icon"><span class="fas fa-times"></span></div>
-    <form action="tutoriais.php" method="get">
+    <form action="tutoriais_pesquisa.php" method="get">
       <input type="search" name="txtpesquisar" class="search-data" placeholder="Pesquisar" required>
       <button type="submit" name="pesquisar" class="fas fa-search"></button>
     </form>
@@ -42,37 +43,34 @@ include 'conexao.php';
   <!-- Término do menu de navegação  -->
 
   <div class="row">
-    <div class="tuto-div">
+    <div class="tuto-div-search">
+      <div class="header">
+        <h1>Resultados da pesquisa:</h1>
+        <div class="relatorio-div">
+          <p id="relatorio"></p>
+        </div>
+      </div>
+      
       <?php
       require_once('conexao.php');
 
-      
-      if(isset($_GET['txtpesquisar'])){
-        $txtpesquisar = $_GET['txtpesquisar'];
-        $query = "SELECT * FROM temas WHERE titulo LIKE '%$txtpesquisar%'";
-        
-      }else{
-        header('Location: tutoriais.php');
-      }
+      $txtpesquisar = $_GET['txtpesquisar'];
+      $query = "SELECT * FROM temas WHERE titulo LIKE '%$txtpesquisar%'";
 
       $resultado = mysqli_query($conexao, $query);
       while ($array = mysqli_fetch_array($resultado)) {
         $id = $array['id_tema'];
-        $titulo_tema = $array['titulo'];
-        $texto = $array['texto'];
+        $titulo_tema = utf8_encode($array['titulo']);
+        $texto = utf8_encode($array['texto']);
       ?>
-        <div class="tuto-box" id="tuto-box">
-          <div class="image">
-            <img src="./CSS/imagens/background-aboutus.jpg">
-          </div>
+        <div class="tuto-box-search">
           <div class="conteudo">
-            <h1><?php echo utf8_encode($titulo_tema) ?></h1>
-          </div>
-          <div class="text">
-              <p><?php echo utf8_encode($texto) ?></p>
-          </div>
-          <div class="ler-mais">
-              <a href="modelo_artigo.php?id=<?php echo $id ?>"> <button>Ler Mais</button></a>
+            <h1><a href="modelo_artigo.php?id=<?php echo $id ?>"><?php echo $titulo_tema ?></a></h1>
+            <div class="texto">
+              <p><?php echo $texto ?></p>
+            </div>
+            <div class="descanso">
+            </div>
           </div>
         </div>
       <?php } ?>
@@ -115,11 +113,11 @@ include 'conexao.php';
         <div class="content">
           <form action="#">
             <div class="email">
-              <div class="text">Email *</div>
+              <div class="text">Email </div>
               <input type="email" name="email" required />
             </div>
             <div class="msg">
-              <div class="text">Menssagem *</div>
+              <div class="text">Mensagem </div>
               <textarea name="menssagem" cols="25" rows="7" required></textarea>
             </div>
             <div class="send-btn">
