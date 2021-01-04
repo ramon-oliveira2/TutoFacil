@@ -69,3 +69,27 @@
     max-height: 100px;
     width: 100%;
 }
+
+@media screen and (max-width: 1200px) {
+    .texto p{
+      font-size: 10pt;
+    }
+    .conteudo h1{
+        text-align: justify;
+        line-height: 1;
+        padding: 10px;
+        font-size: 18pt;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .texto p{
+        font-size: 12pt;
+      }
+      .conteudo h1{
+          text-align: justify;
+          line-height: 1;
+          padding: 10px 0;
+          font-size: 20pt;
+      }
+}
