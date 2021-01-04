@@ -1,5 +1,5 @@
 <?php
-include 'conexao.php';
+  include 'conexao.php';
 ?>
 
 <!DOCTYPE html>
@@ -24,11 +24,11 @@ include 'conexao.php';
   <div class="arranjo_tecnico"></div>
   <nav>
     <div class="menu-icon"><span class="fas fa-bars"></span></div>
-    <div class="logo">TutoFacil</div>
+    <div class="logo"><a href="index.php">TutoFacil</a></div>
     <ul class="nav-items">
-      <li><a href="index.php">Início</a></li>
-      <li><a href="tutoriais.php">Artigos</a></li>
-      <li><a href="sobre.php">Sobre</a></li>
+        <a href="index.php"><li>Início</li></a>
+        <a href="tutoriais.php"><li>Artigos</li></a>
+        <a href="sobre.php"><li>Sobre</li></a>
     </ul>
     <div class="search-icon"><span class="fas fa-search"></span></div>
     <div class="cancel-icon"><span class="fas fa-times"></span></div>

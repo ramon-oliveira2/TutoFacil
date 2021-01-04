@@ -20,11 +20,11 @@
     <div class="arranjo_tecnico"></div>
     <nav>
         <div class="menu-icon"><span class="fas fa-bars"></span></div>
-        <div class="logo">TutoFacil</div>
+        <div class="logo"><a href="index.php">TutoFacil</a></div>
         <ul class="nav-items">
-            <li><a href="index.php">Início</a></li>
-            <li><a href="tutoriais.php">Artigos</a></li>
-            <li><a href="sobre.php">Sobre</a></li>
+            <a href="index.php"><li>Início</li></a>
+            <a href="tutoriais.php"><li>Artigos</li></a>
+            <a href="sobre.php"><li>Sobre</li></a>
         </ul>
         <div class="search-icon"><span class="fas fa-search"></span></div>
         <div class="cancel-icon"><span class="fas fa-times"></span></div>
@@ -59,8 +59,8 @@
             </div>
             <div class="main__content">
                 <h1><span>Não sabe como fazer um email?</span></h1>
-                <h2>No TutoFacil você encontra a resposta para suas dúvidas.</h2><br>
-                <h2>Explore nossos artigos e tutorias e aprenda mais sobre o mundo da informática!</h2>
+                <h2>No TutoFacil você encontra a resposta para essa e outras dúvidas.</h2><br>
+                <h2>Explore nossos artigos, tutoriais e aprenda mais sobre o mundo da informática!</h2>
             </div>
         </div>
     </div>
